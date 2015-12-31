@@ -1,8 +1,9 @@
 <?php
 
-class ContactDetails extends ViewableData {
+class ContactDetails extends ViewableData
+{
 
-//    <% if $SiteConfig.ContactDetailsName %>
+    //    <% if $SiteConfig.ContactDetailsName %>
 //    <span class="contact-name">$SiteConfig.ContactDetailsName</span>
 //    <% end_if %>
 //    <% if $SiteConfig.ContactDetailsAddress %>
@@ -15,24 +16,28 @@ class ContactDetails extends ViewableData {
 //    <a class="contact-email" href="mailto:$SiteConfig.ContactDetailsEmail">$SiteConfig.ContactDetailsEmail</a>
 //    <% end_if %>
 
-    function Name() {
+    public function Name()
+    {
         return SiteConfig::current_site_config()->ContactDetailsName;
     }
 
-    function Address() {
+    public function Address()
+    {
         return nl2br(SiteConfig::current_site_config()->ContactDetailsAddress);
     }
 
-    function Phone() {
+    public function Phone()
+    {
         return SiteConfig::current_site_config()->ContactDetailsPhone;
     }
 
-    function Email() {
+    public function Email()
+    {
         return SiteConfig::current_site_config()->ContactDetailsEmail;
     }
 
-    function forTemplate() {
+    public function forTemplate()
+    {
         return $this->renderWith('ContactDetails');
     }
-
 }
