@@ -11,10 +11,11 @@
  *
  * @author Corey Sewell <corey@gdmedia.tv>
  */
-class ContactDetailsExtension extends DataExtension {
+class ContactDetailsExtension extends DataExtension
+{
 
-    public function ContactDetails() {
+    public function ContactDetails()
+    {
         return ContactDetails::create();
     }
-
 }
